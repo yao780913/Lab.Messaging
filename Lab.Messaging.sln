@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Send", "RabbitMQ.Send\RabbitMQ.Send.csproj", "{B62C5FE8-6FF7-4C1D-AEDD-F94C3AEEC9FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Receive", "RabbitMQ.Receive\RabbitMQ.Receive.csproj", "{77DD0B83-0B74-4655-8124-276E517F695C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkQueues.NewTask", "WorkQueues.NewTask\WorkQueues.NewTask.csproj", "{111D7EF6-CA97-4A69-A713-26C327A895C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkQueues.Worker", "WorkQueues.Worker\WorkQueues.Worker.csproj", "{7C489BF5-8447-447D-B329-B8CD32BE0BB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B62C5FE8-6FF7-4C1D-AEDD-F94C3AEEC9FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B62C5FE8-6FF7-4C1D-AEDD-F94C3AEEC9FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B62C5FE8-6FF7-4C1D-AEDD-F94C3AEEC9FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B62C5FE8-6FF7-4C1D-AEDD-F94C3AEEC9FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77DD0B83-0B74-4655-8124-276E517F695C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77DD0B83-0B74-4655-8124-276E517F695C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77DD0B83-0B74-4655-8124-276E517F695C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77DD0B83-0B74-4655-8124-276E517F695C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{111D7EF6-CA97-4A69-A713-26C327A895C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{111D7EF6-CA97-4A69-A713-26C327A895C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{111D7EF6-CA97-4A69-A713-26C327A895C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{111D7EF6-CA97-4A69-A713-26C327A895C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C489BF5-8447-447D-B329-B8CD32BE0BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C489BF5-8447-447D-B329-B8CD32BE0BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C489BF5-8447-447D-B329-B8CD32BE0BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C489BF5-8447-447D-B329-B8CD32BE0BB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
