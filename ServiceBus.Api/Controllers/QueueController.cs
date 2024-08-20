@@ -50,17 +50,19 @@ public class QueueController : ControllerBase
     public async Task<IActionResult> Receive ()
     {
         await using var client = new ServiceBusClient(_connectionString);
-        await using var receiver = client.CreateReceiver(_queueName);
-
-        var message = await receiver.ReceiveMessageAsync(TimeSpan.FromSeconds(3));
-        if (message is null)
+        await using var processor = client.CreateProcessor(_queueName, new ServiceBusProcessorOptions
         {
-            return NoContent();
-        }
+            AutoCompleteMessages = false,
+            MaxConcurrentCalls = 1
+        });
         
-        var body = message.Body.ToString();
-        await receiver.CompleteMessageAsync(message);
-        return Ok(body);
+        processor.ProcessMessageAsync += MessageHandler;
+        processor.ProcessErrorAsync += ErrorHandler;
+        
+        await processor.StartProcessingAsync();
+        await processor.StopProcessingAsync();
+        
+        return Ok();
     }
     
     [HttpPost("ReceiveBatch")]
@@ -83,5 +85,20 @@ public class QueueController : ControllerBase
         }
 
         return Ok(body.ToString());
+    }
+
+    private static Task ErrorHandler (ProcessErrorEventArgs args)
+    {
+        Console.WriteLine(args.Exception.ToString());
+        return Task.CompletedTask;
+    }
+
+    private static async Task MessageHandler (ProcessMessageEventArgs args)
+    {
+        var message = args.Message.Body.ToString();
+        
+        Console.WriteLine($"Received: {message}");
+        
+        await args.CompleteMessageAsync(args.Message);
     }
 }
