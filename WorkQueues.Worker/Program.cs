@@ -7,11 +7,16 @@ using var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();
 
 channel.QueueDeclare(
-    queue: "Hello",
-    durable: false,
+    queue: "task_queue",
+    durable: true,
     exclusive: false,
     autoDelete: false,
     arguments: null);
+
+channel.BasicQos(
+    prefetchSize: 0,
+    prefetchCount: 1,
+    global: false);
 
 Console.WriteLine(" [*] Waiting for messages.");
 
@@ -32,7 +37,7 @@ consumer.Received += (model, ea) =>
 };
 
 channel.BasicConsume(
-    queue: "Hello",
+    queue: "task_queue",
     autoAck: false,
     consumer: consumer);
 
