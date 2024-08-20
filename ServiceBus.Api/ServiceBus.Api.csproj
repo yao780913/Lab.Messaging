@@ -9,6 +9,7 @@
 
     <ItemGroup>
         <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.18.1" />
+        <PackageReference Include="Microsoft.Extensions.Azure" Version="1.7.5" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 

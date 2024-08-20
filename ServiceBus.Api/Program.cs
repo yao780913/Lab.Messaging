@@ -1,4 +1,5 @@
 using System.Reflection;
+using Microsoft.Extensions.Azure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,17 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Configuration.AddUserSecrets(Assembly.GetExecutingAssembly());
 builder.Services.AddControllers();
+
+builder.Services.AddAzureClients(
+    clientsBuilder =>
+    {
+        var connectionString = builder.Configuration["AzureServiceBus:ConnectionString"]
+                               ?? throw new InvalidOperationException("ServiceBus connection string is missing");
+        clientsBuilder
+            .AddServiceBusClient(connectionString)
+            .WithName("ServiceBusClient");
+
+    });
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -52,6 +52,8 @@
 https://igouist.github.io/post/2022/08/azure-service-bus/
 
 ### Queue
+- `Microsoft.Extensions.Azure`
+- `Microsoft.Azure.ServiceBus`
 1. define queueName and connectionString
 2. `POST /queue/enqueue` to send a message to the queue
 3. `GET /queue/Receive` to receive a message from the queue
