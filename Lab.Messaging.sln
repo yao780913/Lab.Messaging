@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionF
 		readme.md = readme.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubSub.EmitLog", "PubSub.EmitLog\PubSub.EmitLog.csproj", "{BA50AFA3-A7F4-4B54-8D09-3423DAFABEC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubSub.ReceiveLog", "PubSub.ReceiveLog\PubSub.ReceiveLog.csproj", "{A8A034A5-9A8E-4E49-B479-22548583FA1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,5 +39,13 @@ Global
 		{7C489BF5-8447-447D-B329-B8CD32BE0BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C489BF5-8447-447D-B329-B8CD32BE0BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C489BF5-8447-447D-B329-B8CD32BE0BB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA50AFA3-A7F4-4B54-8D09-3423DAFABEC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA50AFA3-A7F4-4B54-8D09-3423DAFABEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA50AFA3-A7F4-4B54-8D09-3423DAFABEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA50AFA3-A7F4-4B54-8D09-3423DAFABEC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8A034A5-9A8E-4E49-B479-22548583FA1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A034A5-9A8E-4E49-B479-22548583FA1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A034A5-9A8E-4E49-B479-22548583FA1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A034A5-9A8E-4E49-B479-22548583FA1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
